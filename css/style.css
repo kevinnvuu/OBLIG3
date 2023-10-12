@@ -1,3 +1,31 @@
 body{
+    margin: 0;
+    max-width: 1200px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #522e2e;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
     
+}
+
+.default-flex{
+background-image: url();
+
 }
