@@ -7,8 +7,14 @@ header {
     align-items: center;
     padding: 10px 20px;
     background-color: #1e61c581;
+    
 }
-
+.search-bar{
+    Font-size: 15px;
+    Margin-left: 15px;
+    
+ }
+    
 #logo {
     text-decoration: none;
     font-size: 24px;
@@ -42,35 +48,51 @@ main {
 }
 
 .default-flex{
-    background-image: url(https://cdn.pixabay.com/photo/2023/07/30/17/00/spider-web-8159);
+    background-image: url(https://cdn.pixabay.https://cdn.pixabay.com/photo/2023/09/20/20/17/skyline-8265564_1280.jpg/photo/2023/07/30/17/00/spider-web-8159);
+
  }
 
 button {
     padding: 15px 30px;
     font-size: 18px;
     background-color: #1e61c581;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
     height: 60px;
     width: 150px;
+    border-radius: 5px;
+    
 }
 
 .beste-deals {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Avstand mellom bildene */
+    gap: 70px; /* Avstand mellom bildene */
     justify-content: center; /* Sentrerer bildene horisontalt */
 }
 
-.nyheter{
-    isplay: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+.beste-deals img{
+    height: 250px;
+    width: 100%;
 }
+
+.nyheter{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px; /* Avstand mellom bildene */
+    justify-content: center; /* Sentrerer bildene horisontalt */
+}
+
+.nyheter img{
+    height: 250px;
+    width: 100%;
+}
+
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #1e61c581;
+    
 }
