@@ -1,31 +1,73 @@
-body{
-    margin: 0;
-    max-width: 1200px;
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1e61c581;
 }
 
 #logo {
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    color: #522e2e;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
 }
 
-header {
+nav ul {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-header nav ul {
-    display: flex;
-    gap: 1rem;
     list-style: none;
-    
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff5500;
+}
+
+main {
+    padding: 20px;
 }
 
 .default-flex{
-background-image: url();
+    background-image: url(https://cdn.pixabay.com/photo/2023/07/30/17/00/spider-web-8159);
+ }
 
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #1e61c581;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 60px;
+    width: 150px;
+}
+
+.beste-deals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Avstand mellom bildene */
+    justify-content: center; /* Sentrerer bildene horisontalt */
+}
+
+.nyheter{
+    isplay: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
 }
