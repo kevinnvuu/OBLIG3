@@ -19,36 +19,50 @@ header {
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #0d0d0d;
 }
 
-nav ul {
+nav ul{
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+    position: relative;
+    right: 200px;
 }
 
-nav li {
+
+nav ul li{
     margin-left: 20px;
+    position: relative;
+    right: 200px;
 }
-
-nav a {
+ 
+nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
 }
 
+
 nav a:hover {
     color: #ff5500;
 }
 
-main {
+main{
     padding: 20px;
 }
 
-.default-flex{
-    background-image: url(https://cdn.pixabay.https://cdn.pixabay.com/photo/2023/09/20/20/17/skyline-8265564_1280.jpg/photo/2023/07/30/17/00/spider-web-8159);
+.shop{
+    background-image:url(https://cdn.pixabay.com/photo/2023/09/20/20/17/skyline-8265564_1280.jpg);
+    background-size: cover;
+    height: 500px;
+    width: 1000px;
+    padding: 0.5%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
 
  }
 
@@ -69,12 +83,18 @@ button {
     display: flex;
     flex-wrap: wrap;
     gap: 70px; /* Avstand mellom bildene */
-    justify-content: center; /* Sentrerer bildene horisontalt */
+    width: 310px;
+    background: white;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0,.3);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
 }
 
 .beste-deals img{
     height: 250px;
-    width: 100%;
+    width: 250px;
+
 }
 
 .nyheter{
@@ -96,3 +116,84 @@ footer {
     background-color: #1e61c581;
     
 }
+
+
+
+
+
+.vårenyheter{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.vårenyheter h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+.vårenyheter .produktboks{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.vårenyheter .produktboks .produktkort{
+    width: 325px;
+    height: 480px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.vårenyheter .produktboks .produktkort .produkt_image{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.vårenyheter .produktboks .produktkort .produkt_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.vårenyheter .produktboks .produktkort .produkt_info h2{
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #0a0a0a;
+}
+
+.vårenyheter .produktboks .produktkort .produkt_info p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+
+.vårenyheter .produktboks .produktkort .produkt_info h3{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.vårenyheter .produktboks .produktkort .produkt_info .kjøp_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: #000;
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.3s;
+}
+
