@@ -1,123 +1,109 @@
-body{
-    background-color:white
+
+/* Dette stykket kode setter boksenes modell til border-box, 
+   noe som betyr at padding og grenser blir inkludert i elementets bredde og høyde. */
+   * {
+    box-sizing: border-box;
 }
+
+/* Dette gjelder for hele nettsiden (body). 
+   Setter margen til 0 på topp og bunn, og automatisk sidejustering i forhold til venstre og høyre kant.
+   Begrenser maksimal bredde til 1200 piksler og tar opp hele tilgjengelig bredde. 
+   Bruker Arial, Helvetica eller sans-serif som skrifttype. */
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Dette gjelder for elementet med id 'logo'.
+   Fjerner understreking, setter fontstørrelsen til 18 piksler og tykkelsen til 600.
+   Endrer tekstfargen til svart (#000). */
+#logo {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* Dette gjelder for header-elementet.
+   Setter opp en flex-container som justerer elementene i headeren.
+   Elementene plasseres i en linje, og tekst justeres vertikalt basert på tekstlinjene. */
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #1e61c581;
-    
-}
-.search-bar{
-    Font-size: 15px;
-    Margin-left: 15px;
-    
- }
-    
-#logo {
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    color: #0d0d0d;
+    align-items: baseline;
 }
 
-nav ul{
+/* Dette gjelder for ul-elementet inne i navigasjonen i headeren.
+   Setter opp en flex-container for elementene i listen.
+   Legger til mellomrom (gap) på 0.5 rem mellom elementene i listen.
+   Fjerner punkttegn som vanligvis vises for listeelementer. */
+header nav ul {
     display: flex;
+    gap: 0.5rem;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    right: 200px;
 }
 
-
-nav ul li{
-    margin-left: 20px;
-    position: relative;
-    right: 200px;
-}
- 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-
-nav a:hover {
-    color: #ff5500;
-}
-
-main{
-    padding: 20px;
-}
-
-.shop{
-    background-image:url(https://cdn.pixabay.com/photo/2023/09/20/20/17/skyline-8265564_1280.jpg);
-    background-size: cover;
-    height: 500px;
-    width: 1000px;
-    padding: 0.5%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-
- }
-
-button {
-    padding: 15px 30px;
-    font-size: 18px;
-    background-color: #1e61c581;
-    color: rgb(0, 0, 0);
-    border: none;
-    cursor: pointer;
-    height: 60px;
-    width: 150px;
-    border-radius: 5px;
-    
-}
-
-.beste-deals {
+/* Dette gjelder for elementer med klassen 'default-flex'.
+   Setter opp en flex-container med plass til elementene i en rad,
+   og justerer dem med jevnt mellomrom mellom dem. */
+   .default-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 70px; /* Avstand mellom bildene */
-    width: 310px;
-    background: white;
-    box-shadow: 0 10px 20px rgb(0, 0, 0, 0,.3);
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 20px;
+    justify-content: space-between;
 }
 
-.beste-deals img{
-    height: 250px;
-    width: 250px;
-
+/* Dette gjelder for overskriftene (h2) inni elementer med klassen 'default-flex'.
+   Setter bredden til h2 til 100% for å ta opp hele bredden til forelder-elementet. */
+.default-flex h2 {
+    flex-basis: 100%;
 }
 
-.nyheter{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 70px; /* Avstand mellom bildene */
-    justify-content: center; /* Sentrerer bildene horisontalt */
+/* Dette gjelder for artikkel-elementer inne i elementer med klassen 'default-flex'.
+   Setter bredden til artikkel-elementene til 33% av forelder-elementets bredde, 
+   men med en minimumsbredde på 300 piksler. */
+.default-flex article {
+    flex-basis: 33%;
+    min-width: 300px;
 }
 
-.nyheter img{
-    height: 250px;
+/* Dette gjelder for bilder (img) inne i artikkel-elementer.
+   Setter bredden til bildet til 100% av forelder-elementet. */
+.default-flex article img {
     width: 100%;
 }
 
+nav a:hover {
+    color: #2b305f;
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1e61c581;
-    
 }
 
-
+.banner {
+    position: relative;
+  }
+  
+  .banner img {
+    width: 100%;
+  }
+  
+  .shop-now-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #1a70c6;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .shop-now-button:hover {
+    background-color: #3f6243;
+  }
 
 
 
@@ -191,9 +177,53 @@ footer {
     justify-content: center;
     text-decoration: none;
     color: white;
-    background: #000;
+    background: #2581cd;
     padding: 8px 10px;
     margin: 0 80px;
     transition: 0.3s;
 }
 
+
+
+
+
+
+
+
+
+main {
+    padding: 20px;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-right: 20px;
+    min-width: 250px;
+}
+
+.product img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.product p {
+    margin-bottom: 10px;
+}
+
+.product .price {
+    font-weight: bold;
+    color: green;
+}
