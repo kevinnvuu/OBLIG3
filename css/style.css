@@ -72,12 +72,17 @@ header nav div{
     text-decoration: none;
     font-size: 150%;
     display: inline-block;
+    padding-top: 16px;
+    color: initial; /* Tilbakestill fargen til standardverdien */
+
 
 }
 
 .navbar{
     text-decoration: none;
     display: none;
+    color: initial; /* Tilbakestill fargen til standardverdien */
+    /* HVVROFOR FUNKER IKKE DET */
 
 }
 
@@ -147,7 +152,7 @@ footer{
         list-style: none;
     }
 
-    #ham, .fa-magnifying-glass, .fa-shopping-cart{
+    #ham, .fa-user, .fa-shopping-cart, .fa-magnifying-glass{
         display: none;
     }
 
