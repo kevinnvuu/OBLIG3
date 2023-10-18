@@ -18,6 +18,7 @@ header{
     font-weight: 600;
     grid-area: header;
     background-color: #3380e4;
+    
 }
 
 header nav{
@@ -34,24 +35,31 @@ header nav div{
 
 .banner {
     padding: 0rem;
-    color: rgb(11, 11, 11);
+    color: #333;
+    font-weight: bolder;
     text-align: center;
-    padding: 100px;
-    background-image: url(https://cdn.pixabay.com/photo/2023/05/03/22/43/tennis-7968714_1280.png);
+    padding: 50px;
+    background-image: url("/Users/kevinvu/Library/CloudStorage/OneDrive-ØstfoldUniversityCollege/WEBUTVIKLING 2023/OBLIG3/img/blueshoespattern.jpeg");
+    /* Bilde er hentet fra: https://www.freepik.com/premium-vector/shoes-pattern-colored-sport-sneakers-collection-textile-design-project-decent-vector-seamless-background-with-sneakers-active-lifestyle_35323885.htm#page=5&query=shoe%20backgorund&position=7&from_view=search&track=ais */
     height: 300px;
-    margin-bottom: 10px;
 }
+
 .banner h1 {
     font-size: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
+    margin-top: 70px;
+
 }
 
 .banner p {
     font-size: 20px;
+    margin-top: 1.5px;
     margin-bottom: 15px;
 }
 
 .shop-now-button {
+    padding: 12px 24px;
+    font-size: 16px;
     display: inline-block;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -59,8 +67,7 @@ header nav div{
     background-color: #3380e4;
     color: white;
 }
-
-
+   
 #logo{
     text-decoration: none;
     font-size: 40px;
@@ -76,7 +83,7 @@ header nav div{
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: black;
+    background-color: #3380e4;
     margin: 0;
     padding: 0;
     top: 40px;
@@ -93,7 +100,7 @@ header nav div{
 }
 
 .flex-section {
-    margin-bottom: 20px; /* Legg til ønsket mellomrom mellom hver flex-seksjon */
+    margin-bottom: 20px; 
 }
 
 main{
@@ -111,8 +118,8 @@ footer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color:rgb(175, 173, 163);
     padding: 1rem 0;
+    background-color: #f0f0f0;
     justify-content: space-around;
 }
 #services h2{
@@ -137,8 +144,17 @@ footer{
         list-style: none;
     }
 
-    #ham, .fa-magnifying-glass{
+    #ham, .fa-magnifying-glass, .fa-shopping-cart{
         display: none;
+    }
+
+    .banner h1 {
+        font-size: 25px;
+        margin-top: 130px;
+    }
+
+    .banner p {
+        font-size: 15px;
     }
 
     .flex-section{
@@ -158,9 +174,11 @@ footer{
         align-self: center;
     }
 
-    .right img{
-        order: 1;
+    .index-image {
+        max-width: 1000%; /* Juster bildets størrelse etter behov */
+        height: auto;
     }
+
 }
 
 .main_image{
@@ -196,14 +214,6 @@ footer nav ul li {
     margin-right: 10px;
 }
 
-footer nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-footer nav ul li a:hover {
-    color: #555;
-}
 
 footer .social-media-icons {
     list-style: none;
@@ -271,6 +281,8 @@ footer .social-media-icons li a:hover {
 
 .default-flex article img {
     width: 100%;
+    max-width: 100%; /* Maks bredde for å sikre responsivitet og proporsjoner */
+
 }
 
 
