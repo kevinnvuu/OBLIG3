@@ -35,7 +35,7 @@ header nav div{
 
 .banner {
     padding: 0rem;
-    color: #333;
+    color:black;
     font-weight: bolder;
     text-align: center;
     padding: 50px;
@@ -70,7 +70,9 @@ header nav div{
    
 #logo{
     text-decoration: none;
-    font-size: 40px;
+    font-size: 150%;
+    display: inline-block;
+
 }
 
 .navbar{
@@ -114,22 +116,23 @@ footer{
     grid-area: footer;
 }
 
-#services{
+#om-oss {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 1rem 0;
-    background-color: #f0f0f0;
+    background-color: #efefef;
+    padding: 1rem;
     justify-content: space-around;
 }
-#services h2{
-    width: 100;
+
+#om-oss h2 {
+    width: 100%;
     text-align: center;
 }
 
-#services article{
+#om-oss article {
     max-width: 300px;
-    width: 100;
+    width: 100%;
     min-width: 200px;
 }
 
@@ -157,6 +160,7 @@ footer{
         font-size: 15px;
     }
 
+    /* tror ikke denne flex gjør noe
     .flex-section{
         display: flex;
         flex-direction: row;
@@ -172,12 +176,7 @@ footer{
         padding: 1rem;
         width: 40%;
         align-self: center;
-    }
-
-    .index-image {
-        max-width: 1000%; /* Juster bildets størrelse etter behov */
-        height: auto;
-    }
+    } */
 
 }
 
@@ -281,8 +280,28 @@ footer .social-media-icons li a:hover {
 
 .default-flex article img {
     width: 100%;
-    max-width: 100%; /* Maks bredde for å sikre responsivitet og proporsjoner */
 
 }
 
+
+/* Styler en svart knapp */
+.blue-btn {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    background: #3380e4;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.member-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* For å sentrere tekst horisontalt */
+    height: 25%;
+
+}
 
