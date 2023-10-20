@@ -3,42 +3,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Inkluderer en stilark for normalisering for å sikre at nettstedet ser likt ut på alle nettlesere -->
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+        <!-- Inkluderer ikon-stiler for ikoner fra FontAwesome -->
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link href="css/font/css/fontawesome.css" rel="stylesheet">
         <link href="css/font/css/brands.css" rel="stylesheet">
         <link href="css/font/css/solid.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <!-- Inkluderer nettstedets egen stilark -->
+         <link rel="stylesheet" href="css/style.css" type="text/css">
 
         <title>Påmeldingssiden</title>
     </head>
     <body>
+        <!-- Hovedbeholderen for nettstedet -->
         <div id="grid-container">
         <header>
             <nav>
                 <a href="index.html" id="logo">KEVIN´S KICKS</a>
                 <div>
+                <!-- Ulike ikoner -->
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-user"></i>
-                 <i class="fa-solid fa-shopping-cart"></i>
+                <i class="fa-solid fa-shopping-cart"></i>
                 <i id="ham" class="fa-solid fa-bars"></i>
                 </div>
                 <ul class="navbar">
+                    <!-- Navigasjonsmeny med lenker -->
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="products.html">Produkter</a></li>
                     <li><a href="index.html#om-oss">Om oss</a></li>
-                    <li><a href="påmeldingsside.html">Bli medlem</a></li>
+                    <li><a href="joinus.html">Bli medlem</a></li>
 
                 </ul>
             </nav>      
         </header>
         <main>
+            <!-- Seksjon for medlemstekst/info -->
             <section class="member-text">
                 <h1>Bli medlem</h1>
                 <p>Registrer deg gratis og få eksklusive fordeler</p>
-                <a href="#" class="blue-btn">JOIN US</a>
+                 <!-- Knapp for å bli medlem -->
+                 <a href="#" class="blue-btn">JOIN US</a>
                 <p>Medlemsfordelene dine venter på deg</p>
-            </section>     
+            </section> 
+            <!-- Seksjon for medlemsfordelene og bilder -->
             <section class="joinus-section">
                 <article>
                     <img src="img/medlemsprodukt.jpeg" alt="bilde">
@@ -52,9 +61,10 @@
                     <h3>Custom Kicks</h3>
                     <p>Tilpass dine egne sko</p>
                 </article>
-
+            </section>
         </main>
         <footer>
+            <!-- Seksjon for kontaktinformasjon -->
             <section>
                 <h4>Kontaktinformasjon</h4>
                 <p>Telefon: +47 9870098</p>
@@ -63,16 +73,17 @@
             </section>
         
             <section>
+                <!-- Sosiale medier-lenker -->
                 <h4>Følg oss</h4>
                 <ul class="social-media-icons">
-                    <li><a href="#" target="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#" target="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" target="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </section>
-
-        </footer>
+       </footer>
         </div> 
+        <!-- JavaScript-kode for å gjøre navigasjonsmenyen responsiv -->
         <script>
             let x= document.querySelector(".navbar")
 
@@ -83,7 +94,6 @@
                     x.className = "navbar"
                 }
             })
-
           
         </script>
     </body>

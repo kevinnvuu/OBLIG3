@@ -2,8 +2,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffff;
-
-
 }
 
 /* Definerer et grid-container som inneholder header, main og footer */
@@ -80,7 +78,7 @@ header nav div{
     font-size: 150%;
     display: inline-block;
     padding-top: 16px;
-    color: initial; 
+    color: initial;
 }
 
 /* Skjuler standard navigasjonsmeny */
@@ -122,7 +120,6 @@ header nav div{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .upper-section h2{
@@ -139,8 +136,10 @@ header nav div{
 
 /* mellomrom totalt */
 .upper-section article img{
-    width: 90%;
+    width: 300px;
    margin: 20px;
+       object-fit: cover; /* Sikrer at bildet dekker hele området uten å bli strukket */
+
 
 }
 
@@ -225,6 +224,24 @@ footer{
 
     }
 
+    .flex-section-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .flex-section-2 img{
+        max-width: 90%;
+        height: auto;
+        display: block;
+    }
+
+    .flex-section-2 section{
+        padding: 1rem;
+        width: 40%;
+
+    }
+
     .joinus-section{
         display: flex;
         flex-direction: row;
@@ -244,7 +261,11 @@ footer{
         align-self: center;
     }
   
+    .upper-section article img{
+        width: 300px;
+       margin: 20px;
     
+}
 }
 
 .main_image{
@@ -371,3 +392,8 @@ footer .social-media-icons li a {
     background: #3380e4;
     color: #fff;
 }
+
+
+.search{
+
+text-align: center;}
