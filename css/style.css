@@ -1,18 +1,23 @@
+/* Setter standard skrifttype for hele nettsiden, og bakgrunnsfarge */
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffff;
 
+
 }
 
+/* Definerer et grid-container som inneholder header, main og footer */
 #grid-container{
     display: grid;
     grid-template-areas: "header" "main" "footer";
 }
 
+/* Legger til padding til header, main og footer for mellomrom */
 header, main, footer{
     padding: 0.5rem;
 }
 
+/* Styler header-seksjonen */
 header{
     font-size: 1.5rem;
     font-weight: 600;
@@ -21,6 +26,7 @@ header{
     
 }
 
+/* Gjør navigasjonselementene i header til flexbokser som er justert mellomrom og til høyre */
 header nav{
     display: flex;
     justify-content: space-between;
@@ -67,17 +73,17 @@ header nav div{
     background-color: #3380e4;
     color: white;
 }
-   
+
+/* styler logo-lenken */
 #logo{
     text-decoration: none;
     font-size: 150%;
     display: inline-block;
     padding-top: 16px;
-    color: initial; /* Tilbakestill fargen til standardverdien */
-
-
+    color: initial; 
 }
 
+/* Skjuler standard navigasjonsmeny */
 .navbar{
     text-decoration: none;
     display: none;
@@ -86,6 +92,7 @@ header nav div{
 
 }
 
+/* Styler responsiv navigasjonsmeny */
 .responsive{
     display: flex;
     flex-direction: column;
@@ -110,23 +117,54 @@ header nav div{
     margin-bottom: 20px; 
 }
 
+/* øvre del av nyheter for sko */
+.upper-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.upper-section h2{
+    flex-basis: 100%; 
+    padding-left: 1%;
+}
+
+/* plass i en linje */
+.upper-section article{
+    flex-basis: 25%;
+    min-width: 300px;
+    
+}
+
+/* mellomrom totalt */
+.upper-section article img{
+    width: 90%;
+   margin: 20px;
+
+}
+
+/* Styler main-seksjonen i gridet */
 main{
     grid-area: main;
 }
+
+/* Setter bredden til bilder inni main-seksjonen til 100% */
 main section img{
     width: 100%;
 }
 
+/* Styler footer-seksjonen i gridet */
 footer{
     grid-area: footer;
 }
 
+/* Styler om-oss seksjonen  */
 #om-oss {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #efefef;
-    padding: 1rem;
     justify-content: space-around;
 }
 
@@ -141,10 +179,14 @@ footer{
     min-width: 200px;
 }
 
+/* Mediestørrelsesregel for skjermer som er bredere enn 600px */
 @media only screen and (min-width: 600px){
-    #grid-container{
+     /* Endrer grid-malen for bredere skjermer */
+      #grid-container{
         grid-template-areas: "header header header" ". main . " ". footer footer footer";
     }
+
+    /* Viser den skjulte navigasjonsmenyen og skjuler menyikoner */
     .navbar{
         display: flex;
         flex-direction: row;
@@ -152,10 +194,11 @@ footer{
         list-style: none;
     }
 
+    /* Skjuler menyikoner i header */
     #ham, .fa-user, .fa-shopping-cart, .fa-magnifying-glass{
         display: none;
     }
-
+    
     .banner h1 {
         font-size: 25px;
         margin-top: 130px;
@@ -165,7 +208,6 @@ footer{
         font-size: 15px;
     }
 
-    /* tror ikke denne flex gjør noe
     .flex-section{
         display: flex;
         flex-direction: row;
@@ -173,16 +215,36 @@ footer{
     }
 
     .flex-section img{
-        width: 25%;
-        padding-right: 10px;
+        max-width: 90%;
+        height: auto;
     }
-    
+
     .flex-section section{
         padding: 1rem;
         width: 40%;
-        align-self: center;
-    } */
 
+    }
+
+    .joinus-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .joinus-section img{
+        width: 100%;
+        height: auto;
+    }
+
+
+    .joinus-section section{
+        padding: 1rem;
+        align-self: center;
+    }
+  
+    
 }
 
 .main_image{
@@ -194,10 +256,10 @@ footer{
 
 footer {
     background-color: #f0f0f0;
-    padding: 20px;
     text-align: center;
     color: #333;
 }
+
 
 footer section {
     margin-bottom: 20px;
@@ -207,17 +269,6 @@ footer h4 {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
-
-footer nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
 
 footer .social-media-icons {
     list-style: none;
@@ -235,16 +286,12 @@ footer .social-media-icons li a {
     font-size: 1.2em;
 }
 
-footer .social-media-icons li a:hover {
-    color: #555;
-}
 
-
-/* Produksiden*/
+/* styler filtrer og sorter knapp */
 .filter-sort-container {
     display: flex;
-    justify-content: flex-end; /* Plasser til høyre */
-    margin: 10px; /* Juster etter behov */
+    justify-content: flex-end; 
+    margin: 10px; 
 
 }
 
@@ -258,6 +305,7 @@ footer .social-media-icons li a:hover {
     border: none
 }
 
+/* styler legg i handlekruv knapp */
 #add-to-cart {
     display: inline-block;
     padding: 10px 12px;
@@ -285,28 +333,41 @@ footer .social-media-icons li a:hover {
 
 .default-flex article img {
     width: 100%;
-
 }
 
 
-/* Styler en svart knapp */
+/* styler bli medlemteksten */
+.member-text {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
+
+.member-text h1 {
+    font-size: 3em;
+}
+
+.member-text p {
+    font-size: 1.5em;
+    
+}
+
+/* styler blå join us knapp */
 .blue-btn {
     display: inline-block;
-    padding: 1rem;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: #3380e4;
+    color: white;
+}
+
+
+
+.see-more-btn{
+    display: inline-block;
+    padding: 0.5rem;
     text-decoration: none;
     background: #3380e4;
     color: #fff;
-    font-weight: bold;
 }
-
-
-.member-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center; /* For å sentrere tekst horisontalt */
-    height: 25%;
-
-}
-
