@@ -3,41 +3,48 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Inkluderer en stilark for normalisering for å sikre at nettstedet ser likt ut på alle nettlesere -->
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+        <!-- Inkluderer ikon-stiler for ikoner fra FontAwesome -->
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link href="css/font/css/fontawesome.css" rel="stylesheet">
         <link href="css/font/css/brands.css" rel="stylesheet">
         <link href="css/font/css/solid.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <!-- Inkluderer nettstedets egen stilark -->
+         <link rel="stylesheet" href="css/style.css" type="text/css">
 
         <title>Produktsiden</title>
     </head>
-    <body>
-        <div id="grid-container">
-        <header>
-            <nav>
-                <a href="index.html" id="logo">KEVIN´S KICKS</a>
-                <div>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-user"></i>
-                <i class="fa-solid fa-shopping-cart"></i>
-                <i id="ham" class="fa-solid fa-bars"></i>
-                </div>
-                <ul class="navbar">
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="products.html">Produkter</a></li>
-                    <li><a href="index.html#om-oss">Om oss</a></li>
-                    <li><a href="joinus.html">Bli medlem</a></li>
+</head>
+<body>
+    <!-- Hovedbeholderen for nettstedet -->
+    <div id="grid-container">
+    <header>
+        <nav>
+            <a href="index.html" id="logo">KEVIN´S KICKS</a>
+            <div>
+            <!-- Ulike ikoner -->
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-shopping-cart"></i>
+            <i id="ham" class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="navbar">
+                <!-- Navigasjonsmeny med lenker -->
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="products.html">Produkter</a></li>
+                <li><a href="index.html#om-oss">Om oss</a></li>
+                <li><a href="joinus.html">Bli medlem</a></li>
 
-                </ul>
-            </nav>           
-        </header>
+            </ul>
+        </nav>      
+    </header>
         <main>
             <nav class="filter-sort-container">
                 <button class="filter-button">Filtrer</button>
                 <button class="sort-button">Sorter</button>
-            </nav>
-            <h2>Alle produkter</h2>
+            </nav> 
+            <!-- <h2>Alle produkter</h2>
         <section class="flex-section">
             <article>
                 <img src="img/blåsko.webp" alt="Produkt 1">
@@ -94,9 +101,114 @@
                 <img src="img/oransjesko.jpeg" alt="Produkt 9">
                 <h3>Still kicks</h3>
                 <p>2300,00 kr</p>
+            </article> -->
+
+            <!-- <h2>Alle produkter</h2> -->
+            <!-- <article id="article-1">
+                <img src="img/hvitesko.webp" alt="placeholder bilde">
+                <h3>High kickers</h3>
+                <p>920,00 kr</p>
+                <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
             </article>
+            <article id="article-2">
+                <img src="img/hvitesko.webp" alt="placeholder bilde">
+                <h3>Qui-gonn</h3>
+                <p>920,00 kr</p>
+                <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+            </article>
+            <article id="article-3">
+                <img src="img/hvitesko.webp" alt="placeholder bilde">
+                <h3>Qui-gonn</h3>
+                <p>920,00 kr</p>
+                <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+            </article>
+            <article id="article-4">
+                <img src="img/hvitesko.webp" alt="placeholder bilde">
+                <h3>Qui-gonn</h3>
+                <p>Lucas  solo.</p>
+                <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+            </article>
+            <article id="article-5">
+                <img src="img/blåsorthvit.webp" alt="placeholder bilde">
+                <h3>Qui-gonn</h3>
+                <p>Lucas  solo.</p>
+                <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+            </article>
+            <article id="article-6">
+                <img src="img/blåsorthvit.webp" alt="placeholder bilde">
+                <h3>Qui-gonn</h3>
+                <p>Luco.</p>
+                <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+            </article>
+            <article id="article-7">
+                <img src="img/blåsorthvit.webp" alt="placeholder bilde">
+                <h3>Qui-gonn</h3>
+                <p>Luclo.</p>
+                <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+            </article>
+            <article id="article-8">
+                <img src="img/blåsorthvit.webp" alt="placeholder bilde">
+                <h3>Qui-gonn</h3>
+                <p>Lucas  solo.</p>
+                <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+            </article> -->
+
+            <section class="default-flex">
+                <h2>Alle produkter</h2>
+                <article>
+                    <img src="img/blåsorthvit.webp" alt="Produkt 1">
+                    <!-- bilde hentet fra: https://www.nike.com/no/t/dunk-high-retro-herresko-nVLZP0/FJ4210-001 -->
+                    <h3>Hightop kicks</h3>
+                    <p>1200,00 kr</p>
+                    <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+                </article>
+                <article>
+                    <img src="img/blåsorthvit.webp" alt="Produkt 2">
+                    <h3>Hightop kicks</h3>
+                    <p>1200,00 kr</p>
+                    <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+                </article>
+                <article>
+                    <img src="img/blåsorthvit.webp" alt="Produkt 3">
+                    <h3>Hightop kicks</h3>
+                    <p>1200,00 kr</p>
+                    <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+                </article>
+                <article>
+                    <img src="img/blåsorthvit.webp" alt="Produkt 4">
+                    <h3>Hightop kicks</h3>
+                    <p>1200,00 kr</p>
+                    <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+                </article>
+                <article>
+                    <img src="img/beigesko.webp" alt="Produkt 5">
+                    <!-- bilde hentet fra: https://www.nike.com/no/launch/t/dunk-low-hangul-day-til-dame -->
+                    <h3>Low kicks</h3>
+                    <p>998,00 kr</p>
+                    <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+                </article>
+                <article>
+                    <img src="img/beigesko.webp" alt="Produkt 6">
+                    <h3>Low kicks</h3>
+                    <p>998,00 kr</p>
+                    <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+                </article>
+                <article>
+                    <img src="img/beigesko.webp" alt="Produkt 7">
+                    <h3>Low kicks</h3>
+                    <p>998,00 kr</p>
+                    <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+                </article>
+                <article>
+                    <img src="img/beigesko.webp"alt="Produkt 8">
+                    <h3>Low kicks</h3>
+                    <p>998,00 kr</p>
+                    <a href="#" class="add-to-cart-button">Legg i handlekurv</a>
+                </article>
+             </section>
         </main>
         <footer>
+            <!-- Seksjon for kontaktinformasjon -->
             <section>
                 <h4>Kontaktinformasjon</h4>
                 <p>Telefon: +47 9870098</p>

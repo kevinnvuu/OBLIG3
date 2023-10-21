@@ -20,8 +20,7 @@ header{
     font-size: 1.5rem;
     font-weight: 600;
     grid-area: header;
-    background-color: #3380e4;
-    
+    background-color: #3380e4;    
 }
 
 /* Gjør navigasjonselementene i header til flexbokser som er justert mellomrom og til høyre */
@@ -46,6 +45,7 @@ header nav div{
     background-image: url("/Users/kevinvu/Library/CloudStorage/OneDrive-ØstfoldUniversityCollege/WEBUTVIKLING 2023/OBLIG3/img/blueshoespattern.jpeg");
     /* Bilde er hentet fra: https://www.freepik.com/premium-vector/shoes-pattern-colored-sport-sneakers-collection-textile-design-project-decent-vector-seamless-background-with-sneakers-active-lifestyle_35323885.htm#page=5&query=shoe%20backgorund&position=7&from_view=search&track=ais */
     height: 300px;
+    width: 100%;
 }
 
 .banner h1 {
@@ -83,9 +83,9 @@ header nav div{
 
 /* Skjuler standard navigasjonsmeny */
 .navbar{
-    text-decoration: none;
     display: none;
     color: initial; /* Tilbakestill fargen til standardverdien */
+    text-decoration: none;
     /* HVVROFOR FUNKER IKKE DET */
 
 }
@@ -103,8 +103,9 @@ header nav div{
     list-style: none;
 }
 
+/* når man trykker på hambruger meny */
 .responsive a{
-    color: white;
+    color: rgb(0, 0, 0);
     display: inline-block;
     padding: 1rem;
     text-decoration: none;
@@ -115,33 +116,6 @@ header nav div{
     margin-bottom: 20px; 
 }
 
-/* øvre del av nyheter for sko */
-.upper-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.upper-section h2{
-    flex-basis: 100%; 
-    padding-left: 1%;
-}
-
-/* plass i en linje */
-.upper-section article{
-    flex-basis: 25%;
-    min-width: 300px;
-    
-}
-
-/* mellomrom totalt */
-.upper-section article img{
-    width: 300px;
-   margin: 20px;
-       object-fit: cover; /* Sikrer at bildet dekker hele området uten å bli strukket */
-
-
-}
 
 /* Styler main-seksjonen i gridet */
 main{
@@ -165,6 +139,7 @@ footer{
     flex-wrap: wrap;
     background-color: #efefef;
     justify-content: space-around;
+    width: 100%;
 }
 
 #om-oss h2 {
@@ -207,8 +182,9 @@ footer{
         font-size: 15px;
     }
 
+/*     
     .flex-section{
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -225,7 +201,7 @@ footer{
     }
 
     .flex-section-2{
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -240,7 +216,7 @@ footer{
         padding: 1rem;
         width: 40%;
 
-    }
+    } */
 
     .joinus-section{
         display: flex;
@@ -257,15 +233,18 @@ footer{
 
 
     .joinus-section section{
-        padding: 1rem;
+        padding: 50rem;
         align-self: center;
     }
   
-    .upper-section article img{
-        width: 300px;
-       margin: 20px;
-    
-}
+
+    filter-sort-container {
+        flex-direction: column; /* Bytt til kolonneoppsett */
+        align-items: flex-end; /* Juster til høyre i kolonnen */
+    }
+    .filter-button, .sort-button {
+        margin-top: 10px; /* Legg til toppmargin for å skille knappene */
+    }
 }
 
 .main_image{
@@ -275,19 +254,15 @@ footer{
         top: 50px;
 }
 
+/* styler footer omåråde */
 footer {
     background-color: #f0f0f0;
     text-align: center;
-    color: #333;
-}
-
-
-footer section {
-    margin-bottom: 20px;
+    color: #000000;
 }
 
 footer h4 {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: 10px;
 }
 
@@ -303,17 +278,15 @@ footer .social-media-icons li {
 
 footer .social-media-icons li a {
     text-decoration: none;
-    color: #333;
-    font-size: 1.2em;
+    color: #000000;
+    font-size: 1em;
 }
 
 
 /* styler filtrer og sorter knapp */
 .filter-sort-container {
-    display: flex;
+    display: inline-block;
     justify-content: flex-end; 
-    margin: 10px; 
-
 }
 
 .filter-button, .sort-button {
@@ -322,36 +295,36 @@ footer .social-media-icons li a {
     font-size: 14px;
     cursor: pointer;
     background-color: #3380e4;
-    color: white; 
-    border: none
+    color: white;
+    border: none;
+    text-align: right;
 }
 
-/* styler legg i handlekruv knapp */
-#add-to-cart {
-    display: inline-block;
-    padding: 10px 12px;
-    background-color: #3380e4;
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px; 
-    float: right;
-}
-
-.default-flex {
+/* Dette gjelder for elementer med klassen 'default-flex'.
+   Setter opp en flex-container med plass til elementene i en rad,
+   og justerer dem med jevnt mellomrom mellom dem. */
+   .default-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+/* Dette gjelder for overskriftene (h2) inni elementer med klassen 'default-flex'.
+   Setter bredden til h2 til 100% for å ta opp hele bredden til forelder-elementet. */
 .default-flex h2 {
     flex-basis: 100%;
 }
 
+/* Dette gjelder for artikkel-elementer inne i elementer med klassen 'default-flex'.
+   Setter bredden til artikkel-elementene til 10% av forelder-elementets bredde, 
+   men med en minimumsbredde på 270 piksler. */
 .default-flex article {
-    flex-basis: 33%;
-    min-width: 300px;
+    flex-basis: 10%;
+    min-width: 270px;
 }
 
+/* Gjelder for bilder inne i artikkel-elementer.
+   Setter bredden til bildet til 100% av forelder-elementet. */
 .default-flex article img {
     width: 100%;
 }
@@ -362,6 +335,7 @@ footer .social-media-icons li a {
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px;
+    margin: auto;
 }
 
 .member-text h1 {
@@ -384,16 +358,32 @@ footer .social-media-icons li a {
 }
 
 
-
-.see-more-btn{
-    display: inline-block;
-    padding: 0.5rem;
-    text-decoration: none;
-    background: #3380e4;
-    color: #fff;
+article img{
+    /*Det er ikke optimalt å gjøre et mindre bilde større på denne måten, men dette er ment til øving så det er greit!*/
+    width: 100%;
 }
 
 
-.search{
+main article{
+    flex-basis:250px;
+    flex-grow: 1;
+    padding: 1rem;
+}
 
-text-align: center;}
+main{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+/* styler legg i handlekurv knapp */
+.add-to-cart-button {
+    display: inline-block;
+    padding: 10px 20px; /* Tilpass polstringen etter dine preferanser */
+    background-color: #3380e4; /* Tilpass bakgrunnsfargen etter dine preferanser */
+    color: #fff; /* Tilpass tekstfargen etter dine preferanser */
+    text-decoration: none;
+    border: none; /* Fjerner knappegrensen */
+}
