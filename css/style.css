@@ -43,7 +43,7 @@ header nav div{
     text-align: center;
     padding: 50px;
     background-image: url("/Users/kevinvu/Library/CloudStorage/OneDrive-ØstfoldUniversityCollege/WEBUTVIKLING 2023/OBLIG3/img/blueshoespattern.jpeg");
-    /* Bilde er hentet fra: https://www.freepik.com/premium-vector/shoes-pattern-colored-sport-sneakers-collection-textile-design-project-decent-vector-seamless-background-with-sneakers-active-lifestyle_35323885.htm#page=5&query=shoe%20backgorund&position=7&from_view=search&track=ais */
+    /* Bilde hentet fra: https://www.freepik.com/premium-vector/shoes-pattern-colored-sport-sneakers-collection-textile-design-project-decent-vector-seamless-background-with-sneakers-active-lifestyle_35323885.htm#page=5&query=shoe%20backgorund&position=7&from_view=search&track=ais */
     height: 300px;
     width: 100%;
 }
@@ -85,11 +85,14 @@ header nav div{
 /* Skjuler standard navigasjonsmeny */
 .navbar{
     display: none;
-    color: initial; /* Tilbakestill fargen til standardverdien */
-    text-decoration: none;
-    /* HVVROFOR FUNKER IKKE DET */
-
 }
+
+/* styler meny på toppen */
+.navbar li a {
+    text-decoration: none; 
+    color: black; 
+}
+
 
 /* Styler responsiv navigasjonsmeny */
 .responsive{
@@ -219,17 +222,6 @@ main{
     .joinus-section img{
         width: 100%; 
         height: auto; 
-    }
-
-    /* Styler containeren for filtrerings- og sorteringsknappene */
-    .filter-sort-container {
-        flex-direction: column; /* Bytt til kolonneoppsett */
-        align-items: flex-end; /* Juster til høyre i kolonnen */
-    }
-
-    /* Legger til toppmargen på filtrerings- og sorteringsknappene for avstand */
-    .filter-button, .sort-button {
-        margin-top: 10px; /* Legg til toppmargin for å skille knappene */
     } 
 }
 
@@ -268,28 +260,20 @@ footer .social-media-icons li a {
     font-size: 1em;
 }
 
-
-/* styler filtrer og sorter knapp */
-.filter-sort-container {
+/* styler filtrer sorter knapp
+.btn {
     display: inline-block;
-    justify-content: flex-end; 
-    padding-left: 8%;
-
-}
-
-.filter-button, .sort-button {
-    padding: 10px 20px;
-    margin-left: 10px;
-    font-size: 14px;
-    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 0.7em;
+    text-decoration: none;
     background-color: #3380e4;
     color: white;
-    border: none;
-    position: relative;
-}
+    margin-top: 10px;
+} */
 
-/* flex-container med plass til elementene i en rad,
-   og justerer mellomrom mellom dem. */
+
+
+/* flex-container med plass til elementene i en rad, justerer mellomrom mellom dem. */
    .default-flex {
     display: flex;
     flex-wrap: wrap;
@@ -340,3 +324,5 @@ footer .social-media-icons li a {
     background-color: #3380e4;
     color: white;
 }
+
+
