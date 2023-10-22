@@ -1,26 +1,26 @@
-/* Setter standard skrifttype for hele nettsiden, og bakgrunnsfarge */
+/* Standard skrifttype for hele nettsiden, og bakgrunnsfarge */
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffff;
 }
 
-/* Definerer et grid-container som inneholder header, main og footer */
+/* grid-container som inneholder header, main og footer */
 #grid-container{
     display: grid;
     grid-template-areas: "header" "main" "footer";
 }
 
-/* Legger til padding til header, main og footer for mellomrom */
-header, main, footer{
-    padding: 0.5rem;
+/* Legger til padding til , main og footer for mellomrom */
+ main, footer{
+    padding: 0;
 }
 
-/* Styler header-seksjonen */
+/* Styler header-seksjonen, ville ha egen padding her*/
 header{
     font-size: 1.5rem;
     font-weight: 600;
-    grid-area: header;
-    background-color: #3380e4;    
+    background-color: #3380e4;
+    padding: 0.5rem;
 }
 
 /* Gjør navigasjonselementene i header til flexbokser som er justert mellomrom og til høyre */
@@ -35,7 +35,7 @@ header nav div{
     gap: 1rem;
 }
 
-
+/* Styler banner-seksjonen */
 .banner {
     padding: 0rem;
     color:black;
@@ -48,6 +48,7 @@ header nav div{
     width: 100%;
 }
 
+/* overskriften i banneren */
 .banner h1 {
     font-size: 30px;
     margin-bottom: 1px;
@@ -56,11 +57,11 @@ header nav div{
 }
 
 .banner p {
-    font-size: 20px;
     margin-top: 1.5px;
     margin-bottom: 15px;
 }
 
+/* Styler "Shop nå" -knappen */
 .shop-now-button {
     padding: 12px 24px;
     font-size: 16px;
@@ -127,10 +128,32 @@ main section img{
     width: 100%;
 }
 
-/* Styler footer-seksjonen i gridet */
-footer{
-    grid-area: footer;
+/* Styler elementene i main-seksjonen som er artikler */
+main article{
+    flex-basis:250px;
+    flex-grow: 1;
+    padding: 1rem;
 }
+
+/* styler main seksjonen */
+main{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+/* styler legg i handlekurv knapp */
+.add-to-cart-button {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: #3380e4;
+    color: #fff; 
+    text-decoration: none;
+    border: none; 
+}
+
 
 /* Styler om-oss seksjonen  */
 #om-oss {
@@ -140,6 +163,7 @@ footer{
     background-color: #efefef;
     justify-content: space-around;
     width: 100%;
+    margin-bottom: 0%;
 }
 
 #om-oss h2 {
@@ -181,82 +205,44 @@ footer{
     .banner p {
         font-size: 15px;
     }
-
-/*     
-    .flex-section{
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
+    
+    /* Styler joinus-section som er en del av bli medlem siden */
+     .joinus-section{
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        gap: 5px; 
     }
 
-    .flex-section img{
-        max-width: 90%;
-        height: auto;
-    }
-
-    .flex-section section{
-        padding: 1rem;
-        width: 40%;
-
-    }
-
-    .flex-section-2{
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .flex-section-2 img{
-        max-width: 90%;
-        height: auto;
-        display: block;
-    }
-
-    .flex-section-2 section{
-        padding: 1rem;
-        width: 40%;
-
-    } */
-
-    .joinus-section{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 5px;
-    }
-
+    /* Styler bilder innenfor 'joinus-section' */
     .joinus-section img{
-        width: 100%;
-        height: auto;
+        width: 100%; 
+        height: auto; 
     }
 
-
-    .joinus-section section{
-        padding: 50rem;
-        align-self: center;
-    }
-  
-
-    filter-sort-container {
+    /* Styler containeren for filtrerings- og sorteringsknappene */
+    .filter-sort-container {
         flex-direction: column; /* Bytt til kolonneoppsett */
         align-items: flex-end; /* Juster til høyre i kolonnen */
     }
+
+    /* Legger til toppmargen på filtrerings- og sorteringsknappene for avstand */
     .filter-button, .sort-button {
         margin-top: 10px; /* Legg til toppmargin for å skille knappene */
-    }
+    } 
 }
 
-.main_image{
-        width: 500px;
-        position: center;
-        left: 20px;
-        top: 50px;
+
+/* Styler footer-seksjonen i gridet */
+footer{
+    grid-area: footer;
 }
+
 
 /* styler footer omåråde */
 footer {
-    background-color: #f0f0f0;
+    background-color: #3380e4;
     text-align: center;
     color: #000000;
 }
@@ -273,7 +259,7 @@ footer .social-media-icons {
 
 footer .social-media-icons li {
     display: inline;
-    margin-right: 10px;
+    margin: 5px;
 }
 
 footer .social-media-icons li a {
@@ -287,6 +273,8 @@ footer .social-media-icons li a {
 .filter-sort-container {
     display: inline-block;
     justify-content: flex-end; 
+    padding-left: 8%;
+
 }
 
 .filter-button, .sort-button {
@@ -297,40 +285,36 @@ footer .social-media-icons li a {
     background-color: #3380e4;
     color: white;
     border: none;
-    text-align: right;
+    position: relative;
 }
 
-/* Dette gjelder for elementer med klassen 'default-flex'.
-   Setter opp en flex-container med plass til elementene i en rad,
-   og justerer dem med jevnt mellomrom mellom dem. */
+/* flex-container med plass til elementene i en rad,
+   og justerer mellomrom mellom dem. */
    .default-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-/* Dette gjelder for overskriftene (h2) inni elementer med klassen 'default-flex'.
-   Setter bredden til h2 til 100% for å ta opp hele bredden til forelder-elementet. */
+/* Overskriftene (h2) inni elementer med klassen 'default-flex' */
 .default-flex h2 {
     flex-basis: 100%;
+    margin-left: 15px;
 }
 
-/* Dette gjelder for artikkel-elementer inne i elementer med klassen 'default-flex'.
-   Setter bredden til artikkel-elementene til 10% av forelder-elementets bredde, 
-   men med en minimumsbredde på 270 piksler. */
+
+/* Artikkel-elementer inne i elementer med klassen 'default-flex' */
 .default-flex article {
     flex-basis: 10%;
     min-width: 270px;
 }
 
-/* Gjelder for bilder inne i artikkel-elementer.
-   Setter bredden til bildet til 100% av forelder-elementet. */
+/* Bilder inne i artikkel-elementer, justerer bredden til bildet til 100% av forelder-elementet. */
 .default-flex article img {
     width: 100%;
 }
 
-
-/* styler bli medlemteksten */
+/* Styler bli medlemteksten */
 .member-text {
     color: rgb(0, 0, 0);
     text-align: center;
@@ -355,35 +339,4 @@ footer .social-media-icons li a {
     text-decoration: none;
     background-color: #3380e4;
     color: white;
-}
-
-
-article img{
-    /*Det er ikke optimalt å gjøre et mindre bilde større på denne måten, men dette er ment til øving så det er greit!*/
-    width: 100%;
-}
-
-
-main article{
-    flex-basis:250px;
-    flex-grow: 1;
-    padding: 1rem;
-}
-
-main{
-    grid-area: main;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-
-/* styler legg i handlekurv knapp */
-.add-to-cart-button {
-    display: inline-block;
-    padding: 10px 20px; /* Tilpass polstringen etter dine preferanser */
-    background-color: #3380e4; /* Tilpass bakgrunnsfargen etter dine preferanser */
-    color: #fff; /* Tilpass tekstfargen etter dine preferanser */
-    text-decoration: none;
-    border: none; /* Fjerner knappegrensen */
 }
