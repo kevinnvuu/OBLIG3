@@ -37,12 +37,11 @@ header nav div{
 
 /* Styler banner-seksjonen */
 .banner {
-    padding: 0rem;
     color:black;
     font-weight: bolder;
     text-align: center;
     padding: 50px;
-    background-image: url("/Users/kevinvu/Library/CloudStorage/OneDrive-ØstfoldUniversityCollege/WEBUTVIKLING 2023/OBLIG3/img/blueshoespattern.jpeg");
+    background-image: url("https://img.freepik.com/premium-vector/shoes-pattern-colored-sport-sneakers-collection-textile-design-project-decent-vector-seamless-background-with-sneakers-active-lifestyle_80590-16823.jpg?w=1380");
     /* Bilde hentet fra: https://www.freepik.com/premium-vector/shoes-pattern-colored-sport-sneakers-collection-textile-design-project-decent-vector-seamless-background-with-sneakers-active-lifestyle_35323885.htm#page=5&query=shoe%20backgorund&position=7&from_view=search&track=ais */
     height: 300px;
     width: 100%;
@@ -85,6 +84,7 @@ header nav div{
 /* Skjuler standard navigasjonsmeny */
 .navbar{
     display: none;
+    
 }
 
 /* styler meny på toppen */
@@ -92,7 +92,6 @@ header nav div{
     text-decoration: none; 
     color: black; 
 }
-
 
 /* Styler responsiv navigasjonsmeny */
 .responsive{
@@ -195,11 +194,16 @@ main{
         list-style: none;
     }
 
-    /* Skjuler menyikoner i header */
-    #ham, .fa-user, .fa-shopping-cart, .fa-magnifying-glass{
-        display: none;
+    /* ulike ikoner */
+     .fa-user, .fa-shopping-cart, .fa-magnifying-glass{
+        padding-top: 24px;
     }
     
+    /* Skjuler hamburgermeny i header */
+    #ham {
+        display: none;
+    }
+
     .banner h1 {
         font-size: 25px;
         margin-top: 130px;
@@ -218,7 +222,7 @@ main{
         gap: 5px; 
     }
 
-    /* Styler bilder innenfor 'joinus-section' */
+    /* Styler bilder innenfor joinus-section */
     .joinus-section img{
         width: 100%; 
         height: auto; 
@@ -259,19 +263,6 @@ footer .social-media-icons li a {
     color: #000000;
     font-size: 1em;
 }
-
-/* styler filtrer sorter knapp
-.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    font-size: 0.7em;
-    text-decoration: none;
-    background-color: #3380e4;
-    color: white;
-    margin-top: 10px;
-} */
-
-
 
 /* flex-container med plass til elementene i en rad, justerer mellomrom mellom dem. */
    .default-flex {
@@ -315,7 +306,7 @@ footer .social-media-icons li a {
     
 }
 
-/* styler blå join us knapp */
+/* styler blå join us knapp på påmeldingssiden */
 .blue-btn {
     display: inline-block;
     padding: 15px 30px;
